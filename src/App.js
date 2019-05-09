@@ -1,19 +1,20 @@
 import React from 'react';
 import ScreenView from './View/ScreenView';
 import Header from './Components/Header/Header';
+import SideNav from './Components/SideNav/SideNav';
 
 function App() {
   return (
     <div className="App">
-      <div class="container-sm">
-        <div class="row">
+      <div style={styleContainer} class="container-sm">
+        <div style={styleHeader} class="row">
           <div class="col-12">
             <Header />
           </div>
         </div>
-        <div class="row">
+        <div style={styleBody} class="row">
           <div class="col-2">
-            <h1>menu lateral</h1>
+            <SideNav />
           </div>
           <div class="col-10">
             <ScreenView />
@@ -22,6 +23,18 @@ function App() {
       </div>
     </div>
   );
+}
+
+const styleContainer = {
+  height: '100vh',
+}
+
+const styleHeader = {
+  height: '10vh',
+}
+
+const styleBody = {
+  height: '90vh',
 }
 
 export default App;
