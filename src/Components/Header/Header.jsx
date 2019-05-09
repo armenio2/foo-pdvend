@@ -29,7 +29,6 @@ function Header() {
 
 const styles = {
     padding: '8px',
-    borderBottom: 'solid 2px black',
 }
 
 export default Header;

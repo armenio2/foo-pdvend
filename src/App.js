@@ -31,6 +31,7 @@ const styleContainer = {
 
 const styleHeader = {
   height: '10vh',
+  borderBottom: 'solid 2px black',
 }
 
 const styleBody = {
