@@ -5,21 +5,18 @@ function Header() {
     return (
         <div style={styles} class="container-sm">
             <div class="row align-items-center">
-                <div class="col-2 col-sm-2 col-md-2">
-                    <img src={LogoNexaas} />
-                </div>
-                <div class="col-5 col-sm-5 col-md-8">
-                    <div class="input-group">
+                <div class="col-10  col-md-10">
+                    <div style={styleInputGroup} class="input-group">
                         <div class="input-group-prepend">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon1"><img src={Shape} /></button>
+                            <div style={styleButton}><img src={Shape} /></div>
                         </div>
-                        <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" />
+                        <input style={styleInput} placeholder='Busque por clientes' />
                     </div>
                 </div>
-                <div class="col-1 col-sm-auto col-md-1">
+                <div class="col-1  col-md-1">
                     <img src={Notification} />
                 </div>
-                <div class="col-1 col-sm-auto col-md-1">
+                <div class="col-1 col-md-1">
                     <img src={Avatar} />
                 </div>
             </div>
@@ -29,6 +26,24 @@ function Header() {
 
 const styles = {
     padding: '8px',
+}
+
+const styleButton = {
+    background: 'transparent',
+    border: 'none',
+    width: '8%',
+}
+
+const styleInput = {
+    border: 'none',
+    width: '90%',
+    marginLeft: '2%'
+}
+
+const styleInputGroup = {
+    border: '1px solid #F5F5F5',
+    borderRadius: '50px',
+    padding: 8
 }
 
 export default Header;

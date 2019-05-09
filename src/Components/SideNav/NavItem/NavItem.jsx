@@ -20,8 +20,11 @@ function NavItem(props) {
     return (
         <Div style={props.selected ? activeItem : null}>
             <div class="row align-items-center">
-                <div class="col-12">
-                    <img src={props.icon} style={{ marginRight: '20px' }} /><span>{props.label}</span>
+                <div class="col-3">
+                    <img src={props.icon} />
+                </div>
+                <div class="col-9">
+                    <span>{props.label}</span>
                 </div>
             </div>
         </Div>

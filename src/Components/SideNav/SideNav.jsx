@@ -12,7 +12,7 @@ function SideNav() {
 }
 
 const styles = {
-    borderRight: 'solid 2px black',
+    borderRight: 'solid 2px #C6D3D7',
     height: '90vh',
 }
 
