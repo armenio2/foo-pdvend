@@ -1,0 +1,14 @@
+.generalPanel{
+    padding: 16px;
+}
+
+.generalPanel span{
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 8px;
+    border-left: 5px solid blue;
+}
+
+.card{
+    max-width: 18rem;
+}
