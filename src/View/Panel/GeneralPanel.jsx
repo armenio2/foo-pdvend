@@ -1,8 +1,11 @@
 import React from 'react';
 import './GeneralPanel.css'
 import Card from '../../Util/Card/Card';
+import { get_customers } from '../../service/get_customers';
 
 function GeneralPanel() {
+    const foo = get_customers
+    console.log("get_customerasdasds ", foo)
     return (
         <div style={style} class='generalPanel'>
             <div class="container-sm">
