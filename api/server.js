@@ -7,7 +7,7 @@ const app = express()
 var cors = require('cors')
 
 app.use(cors())
-app.get('/api/v1/customers', cors(), (req, res, next) => {
+app.get('/api/v1/customers', cors(), (req, res, next) => { //test cors
     res.json(data)
 })
 
