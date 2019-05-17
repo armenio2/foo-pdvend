@@ -11,6 +11,6 @@ const get_customers = async () => {
     //const data = await response.json()
     //return response.data
 }
-console.log("fora da function ", get_customers().then())
+//console.log("fora da function ", get_customers().then())
 export default get_customers();
 //export default getCustomers = get_customers;
