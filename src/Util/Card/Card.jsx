@@ -6,12 +6,12 @@ function Card(props) {
     return (
         <div class="container-sm card">
             <div class="row">
-                <div class="col-12" >
+                <div class="col-12 cardTitle" >
                     <p>{props.title}</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12" >
+                <div class="col-12 cardText" >
                     <p>{value}</p>
                 </div>
             </div>

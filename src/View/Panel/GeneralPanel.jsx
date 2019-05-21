@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './GeneralPanel.css'
 import Card from '../../Util/Card/Card';
 import getCustomers from '../../service/get_customers';
-
-function formatClienteNumbers(result) {
-    return result.length;
-}
+import RowCard from '../../Util/RowCard/RowCard';
 
 function returnLength(result) {
     return result.length;
@@ -47,7 +44,7 @@ function GeneralPanel() {
         setResult(response.customers)
     }, [setResult]);
 
-    console.log("resultCustomers ", resultCustomers)
+
     return (
         <div style={style} class='generalPanel'>
             <div class="container-sm">
@@ -72,10 +69,15 @@ function GeneralPanel() {
                 </div>
             </div>
             <div class="container-sm">
-                <div class="row">
+                <div class="row  align-items-center">
                     <div class="col-12" >
                         <span>Clientes Cadastrados</span>
                     </div>
+                    {resultCustomers ? resultCustomers.map((item) => (
+                        <div class="col-12" style={{ padding: 0 }}>
+                            <RowCard data={item}></RowCard>
+                        </div>
+                    )) : null}
                 </div>
             </div>
         </div>

@@ -1,4 +1,11 @@
 .card{
     background: white;
     margin: 16px 0 16px 0;
+    padding: 18px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.cardText{
+    color: #6F9CD6;
+    font-size: 18px;
 }
