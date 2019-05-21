@@ -5,3 +5,8 @@
     font-weight: bold;
     width: 100%;
 }
+@media only screen and (max-width: 600px) {
+    .rowCard {
+      font-size: 10px;
+    }
+  }

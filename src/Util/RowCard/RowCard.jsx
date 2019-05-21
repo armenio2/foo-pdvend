@@ -13,19 +13,19 @@ function RowCard(props) {
     return (
         <div class="container-sm rowCard">
             <div class="row align-items-center">
-                <div class="col-1 align-self-center" >
+                <div class="col-12 col-md-1 align-self-center" >
                     <img src={Avatar} />
                 </div>
-                <div class="col-2 align-self-center" >
+                <div class="col-4 col-md-2 align-self-center" >
                     <p>{result.name}</p>
                 </div>
-                <div class="col-5 align-self-center" >
+                <div class="col-8 col-md-5 align-self-center" >
                     <p>{result.email}</p>
                 </div>
-                <div class="col-2 align-self-center" >
+                <div class="col-6 col-md-2 align-self-center" >
                     <p>{result.phone}</p>
                 </div>
-                <div class="col-2 align-self-center" >
+                <div class="col-6 col-md-2 align-self-center" >
                     {status}
                 </div>
             </div>

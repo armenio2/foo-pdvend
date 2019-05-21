@@ -3,49 +3,34 @@ import ScreenView from './View/ScreenView';
 import Header from './Components/Header/Header';
 import SideNav from './Components/SideNav/SideNav';
 import { LogoNexaas } from './assets';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <div style={styleContainer} class="container-sm">
-        <div style={styleHeader} class="row">
-          <div style={styleLogo} class="col-2" >
+      <div class="container-sm containerApp">
+        <div class="row align-items-center styleHeader">
+          <div class="col-12 col-md-2 styleLogo" >
             <img src={LogoNexaas} />
           </div>
-          <div class="col-10" >
+          <div class="col-12 d-none d-sm-block d-md-none" >
+             <p>SugarMenu</p>
+          </div>
+          <div class="col-12 col-md-10 d-none" >
             <Header />
           </div>
         </div>
-        <div style={styleBody} class="row">
-          <div class="col-2" style={{ paddingRight: 0 }}>
+        <div class="row styleBody">
+          <div class="d-none d-md-block col-md-2" style={{ paddingRight: 0 }}>
             <SideNav />
           </div>
-          <div class="col-10" style={{ padding: 0 }}>
+          <div class="col-12 col-md-10" style={{ padding: 0 }}>
             <ScreenView />
           </div>
         </div>
       </div>
     </div>
   );
-}
-
-const styleContainer = {
-  height: '100vh',
-}
-
-const styleHeader = {
-  height: '8vh',
-  borderBottom: 'solid 2px #C6D3D7',
-}
-
-const styleBody = {
-  height: '92vh',
-}
-
-const styleLogo = {
-  borderRight: 'solid 2px #C6D3D7',
-  padding: '22px',
-  paddingLeft: '3%'
 }
 
 export default App;

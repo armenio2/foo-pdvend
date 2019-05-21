@@ -1,0 +1,32 @@
+.containerApp{
+    height: 100vh;
+}
+
+.styleHeader{
+    height: 8vh;
+    border-bottom: solid 2px #C6D3D7;
+}
+
+.styleBody{
+    height: 92vh;
+}
+
+.styleLogo {
+    border-right: solid 2px #C6D3D7;
+    padding: 22px;
+    padding-left: 3%;
+}
+@media only screen and (max-width: 600px) {
+    .containerApp{
+        height: auto;
+    }
+    .styleHeader{
+        height: auto;
+    }
+    .styleLogo {
+        align-items: center;
+        padding: 22px;
+    padding-left: auto;
+    }
+    
+  }

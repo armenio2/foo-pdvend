@@ -9,3 +9,11 @@
     color: #6F9CD6;
     font-size: 18px;
 }
+@media only screen and (max-width: 600px) {
+    .card {
+      font-size: 10px;
+    }
+    .cardText{
+        font-size: 10px;
+    }
+  }

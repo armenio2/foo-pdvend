@@ -23,7 +23,7 @@ function returnAdimplentesClientes(result) {
         return 0;
     } else {
         let total = []
-        result.forEach(item => item.status === 'overdue' ? total.push(item) : '')
+        result.forEach(item => item.status !== 'overdue' ? total.push(item) : '')
         return total.length;
     }
 }
@@ -44,37 +44,36 @@ function GeneralPanel() {
         setResult(response.customers)
     }, [setResult]);
 
-
     return (
         <div style={style} class='generalPanel'>
             <div class="container-sm">
                 <div class="row">
-                    <div class="col-12" >
+                    <div class="col-12 col-md-12" >
                         <span>Visão Geral</span>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3" >
+                    <div class="col-6 col-md-3" >
                         <Card title='Total de Clientes' value={returnLength(resultCustomers)} type={null} />
                     </div>
-                    <div class="col-3" >
+                    <div class="col-6 col-md-3" >
                         <Card title='Clientes Inadimplentes' value={returnInadimplentesClientes(resultCustomers)} type={null} />
                     </div>
-                    <div class="col-3" >
+                    <div class="col-6 col-md-3" >
                         <Card title='Clientes Adimplentes' value={returnAdimplentesClientes(resultCustomers)} type={null} />
                     </div>
-                    <div class="col-3" >
+                    <div class="col-6 col-md-3" >
                         <Card title='Total Arrecadado' value={returnTotalClientes(resultCustomers)} type={'money'} />
                     </div>
                 </div>
             </div>
             <div class="container-sm">
                 <div class="row  align-items-center">
-                    <div class="col-12" >
+                    <div class="col-12 col-md-12" >
                         <span>Clientes Cadastrados</span>
                     </div>
                     {resultCustomers ? resultCustomers.map((item) => (
-                        <div class="col-12" style={{ padding: 0 }}>
+                        <div class="col-12 col-md-12" style={{ padding: 0 }}>
                             <RowCard data={item}></RowCard>
                         </div>
                     )) : null}
